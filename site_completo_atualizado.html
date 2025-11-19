@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConhecimentoPlus - Cursos Especializados</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+            --text: #333;
+            --text-light: #7f8c8d;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
+        body{background:#f9f9f9;color:var(--text);line-height:1.6;}
+        .container{width:90%;max-width:1200px;margin:auto;padding:0 15px;}
+        header{background:var(--primary);color:#fff;padding:1rem 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+        .header-content{display:flex;justify-content:space-between;align-items:center;}
+        .logo{font-size:1.8rem;font-weight:700;color:white;text-decoration:none;}
+        .logo span{color:var(--secondary);}
+        nav ul{display:flex;list-style:none;}
+        nav ul li{margin-left:1.5rem;}
+        nav ul li a{color:white;text-decoration:none;font-weight:500;transition:0.3s;}
+        nav ul li a:hover{color:var(--secondary);}
+        .mobile-menu{display:none;font-size:1.5rem;cursor:pointer;}
+        .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:4rem 0;text-align:center;}
+        .hero h1{font-size:2.5rem;margin-bottom:1rem;}
+        .hero p{font-size:1.2rem;max-width:700px;margin:auto;margin-bottom:2rem;}
+        .btn{display:inline-block;background:var(--accent);color:white;padding:.8rem 1.5rem;border-radius:4px;text-decoration:none;font-weight:600;transition:.3s;border:none;cursor:pointer;}
+        .btn:hover{background:#c0392b;transform:translateY(-2px);}
+        .btn-secondary{background:transparent;border:2px solid white;}
+        .btn-secondary:hover{background:white;color:var(--primary);}
+        .features{padding:4rem 0;background:white;}
+        .section-title{text-align:center;margin-bottom:3rem;}
+        .section-title h2{font-size:2rem;color:var(--primary);margin-bottom:.5rem;}
+        .section-title p{color:var(--text-light);max-width:600px;margin:auto;}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
+        .feature-card{background:var(--light);padding:2rem;border-radius:8px;text-align:center;transition:.3s;}
+        .feature-card:hover{transform:translateY(-5px);}
+        .feature-icon{font-size:2.5rem;color:var(--secondary);margin-bottom:1rem;}
+        .courses{padding:4rem 0;background:#f5f7fa;}
+        .courses-filter{display:flex;justify-content:center;margin-bottom:2rem;flex-wrap:wrap;}
+        .filter-btn{background:none;border:none;padding:.5rem 1rem;margin:.5rem;cursor:pointer;font-weight:500;border-radius:4px;transition:.3s;}
+        .filter-btn.active,.filter-btn:hover{background:var(--secondary);color:white;}
+        .courses-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;}
+        .course-card{background:white;border-radius:8px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.05);transition:.3s;}
+        .course-card:hover{transform:translateY(-5px);}
+        .course-img{height:180px;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:1.2rem;}
+        .course-content{padding:1.5rem;}
+        .course-category{background:var(--light);color:var(--text-light);padding:.3rem .8rem;border-radius:20px;font-size:.8rem;margin-bottom:.8rem;display:inline-block;}
+        .course-price{font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:1rem;}
+        footer{background:var(--dark);color:white;padding:3rem 0 1.5rem;}
+        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;}
+        .footer-column h3{margin-bottom:1.5rem;font-size:1.2rem;color:var(--secondary);}
+        .footer-column ul{list-style:none;}
+        .footer-column ul li{margin-bottom:.8rem;}
+        .footer-column ul li a{color:#bdc3c7;text-decoration:none;transition:.3s;}
+        .footer-column ul li a:hover{color:white;}
+        .copyright{text-align:center;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);color:#bdc3c7;font-size:.9rem;}
+    </style>
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <a class="logo">Conhecimento<span>Plus</span></a>
+        <div class="mobile-menu">☰</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#courses">Cursos</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><span style="color:white;font-weight:600;">Área do Aluno</span></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="container">
+        <h1>Transforme seu conhecimento em resultados</h1>
+        <p>Aprenda com cursos práticos e especializados, todos por apenas R$29,99.</p>
+        <a href="#courses" class="btn">Ver Cursos</a>
+    </div>
+</section>
+
+<section class="courses" id="courses">
+    <div class="container">
+        <div class="section-title">
+            <h2>Nossos Cursos</h2>
+            <p>Todos os cursos por apenas R$29,99.</p>
+        </div>
+
+        <div class="courses-grid">
+
+            <div class="course-card" data-category="culinaria">
+                <div class="course-img" style="background:#e74c3c;">Curso de Bolos</div>
+                <div class="course-content">
+                    <span class="course-category">Culinária</span>
+                    <h3>Curso de Bolos Completo</h3>
+                    <p>Massas, recheios e decoração.</p>
+                    <div class="course-price">R$ 29,99</div>
+                    <a href="https://pay.kiwify.com.br/nBikkfu" class="btn" target="_blank">Comprar Agora</a>
+                </div>
+            </div>
+
+            <div class="course-card" data-category="negocios">
+                <div class="course-img" style="background:#d35400;">Marketing Digital</div>
+                <div class="course-content">
+                    <span class="course-category">Negócios</span>
+                    <h3>Marketing Digital</h3>
+                    <p>Estrategias para pequenos negócios.</p>
+                    <div class="course-price">R$ 29,99</div>
+                    <a href="https://pay.kiwify.com.br/qFoZ6tz" class="btn" target="_blank">Comprar Agora</a>
+                </div>
+            </div>
+
+            <div class="course-card" data-category="pessoal">
+                <div class="course-img" style="background:#27ae60;">Finanças</div>
+                <div class="course-content">
+                    <span class="course-category">Finanças</span>
+                    <h3>Finanças Pessoais</h3>
+                    <p>Organização financeira.</p>
+                    <div class="course-price">R$ 29,99</div>
+                    <a href="https://pay.kiwify.com.br/gmfDl18" class="btn" target="_blank">Comprar Agora</a>
+                </div>
+            </div>
+
+            <div class="course-card" data-category="habilidades">
+                <div class="course-img" style="background:#7f8c8d;">Manutenção</div>
+                <div class="course-content">
+                    <span class="course-category">Habilidades</span>
+                    <h3>Manutenção Residencial</h3>
+                    <p>Reparos básicos.</p>
+                    <div class="course-price">R$ 29,99</div>
+                    <a href="https://kiwify.app/dIhDQfn" class="btn" target="_blank">Comprar Agora</a>
+                </div>
+            </div>
+
+            <div class="course-card" data-category="artesanato">
+                <div class="course-img" style="background:#9b59b6;">Artesanato</div>
+                <div class="course-content">
+                    <span class="course-category">Artesanato</span>
+                    <h3>Artesanato Reciclado</h3>
+                    <p>Projetos sustentáveis.</p>
+                    <div class="course-price">R$ 29,99</div>
+                    <a href="https://kiwify.app/pQ0HPqo" class="btn" target="_blank">Comprar Agora</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-column">
+                <h3>ConhecimentoPlus</h3>
+                <p>Cursos práticos e acessíveis.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Cursos</h3>
+                <ul>
+                    <li><a>Culinária</a></li>
+                    <li><a>Negócios</a></li>
+                    <li><a>Finanças</a></li>
+                    <li><a>Habilidades</a></li>
+                    <li><a>Artesanato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><span style="color:white;">Área do Aluno</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 ConhecimentoPlus. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
